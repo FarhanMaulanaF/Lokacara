@@ -1,6 +1,9 @@
 <template>
 <!-- in wrapper -->
 <div class="wrapper">
+  <div class="body-overlay"></div>
+
+  <!-- ----------------------------- side bar ----------------------------- -->
   <!-- in navigation-drwaer -->
   <v-navigation-drawer
    color="#5D5F61"
@@ -34,8 +37,26 @@
     <v-divider></v-divider>
   </v-navigation-drawer>
   <!-- out navigation-drawer -->
+
+  <!-- ----------------------------- page content ----------------------------- -->
+
+  <!-- in content -->
+  <div class="contect">
+    <!-- in top-navbar -->
+    <div class="top-navbar">
+      <nav class="navbar" navbar-expand-lg>
+        <button type="button" id="sidebar-collapse" class="d-xl-block d-lg-block d-md-none d-none">
+          
+        </button>
+      </nav>
+    </div>
+    <!-- out top-navbar -->
+  </div>
+  <!-- out content -->
 </div>
 <!-- out wrapper -->
+
+
 </template>
 
 <script>
