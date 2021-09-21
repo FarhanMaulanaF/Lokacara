@@ -3,7 +3,9 @@
     <h3>Dashboard</h3>
   
     <v-container class="my-5">
-      <v-layout row></v-layout>
+      <v-layout row>
+        <v-flex></v-flex>
+      </v-layout>
     </v-container>
   </div>
 
