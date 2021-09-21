@@ -17,16 +17,16 @@
                 <h1 class='title-login'>Register</h1>
                 <hr style=" margin-bottom: 24px;">
                 <label for="email">Email</label>
-                <input v-model="email" required style=" margin-bottom: 16px;" type="email" class="email" id="email">
+                <input v-model="form.email" required style=" margin-bottom: 16px;" type="email" class="email" id="email">
 
                 <label for="email">Name</label>
-                <input v-model="name" required style=" margin-bottom: 16px;" type="text" class="name" id="name">
+                <input v-model="form.name" required style=" margin-bottom: 16px;" type="text" class="name" id="name">
 
                 <label for="password">Password</label>
-                <input v-model="pw" required style=" margin-bottom: 16px;" type="password" class="password" id="password">
+                <input v-model="form.pw" required style=" margin-bottom: 16px;" type="password" class="password" id="password">
 
                 <label for="c-password">Confirm Password</label>
-                <input v-model="pw_c" required style=" margin-bottom: 24px;" type="password" class="c-password" id="c-password">
+                <input v-model="form.pw_c" required style=" margin-bottom: 24px;" type="password" class="c-password" id="c-password">
 
                 <b-button @click='handleSubmit' class='btn-login' variant="primary">Register</b-button>
               
@@ -50,23 +50,25 @@ export default {
   name:'Register',
   data(){
     return{
-      email: '',
-      name: '',
-      pw: '',
-      pw_c: ''
+      form:{
+        email: '',
+        name: '',
+        pw: '',
+        pw_c: ''
+      }
     }
   },
-   methods:{
+  methods:{
     async handleSubmit(){
-     await axios.post('register',{
-        email: this.email,
-        name: this.name,
-        pw: this.pw,
-        pw_c: this.pw_c
+      await axios.post('login', {
+        email: this.form.email,
+        name: this.form.name,
+        pw: this.form.pw,
+        pw_c: this.form.pw_c
       });
-
-      this.$router.push('/');
       
+      this.$router.push('/');
+      // console.log(data);
     }
   }
 }
@@ -129,7 +131,7 @@ input{
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   padding-left: 2%;
   color: #585858;
 }

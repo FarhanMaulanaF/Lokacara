@@ -15,12 +15,12 @@
                 <h1 class='title-login'>Login</h1>
                 <hr style=" margin-bottom: 24px;">
                 <label for="email">Email</label>
-                <input v-model="email" required style=" margin-bottom: 16px;" type="email" class="email" id="email">
+                <input v-model="form.email" required style=" margin-bottom: 16px;" type="email" class="email" id="email">
 
                 <label for="password">Password</label>
-                <input v-model="pw" required style=" margin-bottom: 24px;" type="password" class="password" id="password">
+                <input v-model="form.pw" required style=" margin-bottom: 24px;" type="password" class="password" id="password">
 
-                <b-button class='btn-login' variant="primary">Login</b-button>
+                <b-button @click='handleSubmit' class='btn-login' variant="primary">Login</b-button>
                 <router-link style="text-decoration: none;" :to="{name: 'Forgot'}">
                   <a class="forgot" href="">Forgot Password</a>
                 </router-link>
@@ -47,19 +47,31 @@ export default {
   name:'Login',
   data(){
     return{
+      form: {
         email: '',
         pw: ''
+      }
     }
   },
-   methods:{
+  methods: {
+      // const data = {
+      //   email: this.email,
+      //   pw: this.pw
+      // }
+      async handleSubmit(){
 
-       async handleSubmit(){
-         const response = await axios.post('Login',{
-           email: this.email,
-           pw: this.pw
-         });
-         console.log(response);
-        }
+        console.log(this.form)
+
+        const response = await axios.post('login',{
+          email: this.form.email,
+          password: this.form.pw
+        });
+
+       console.log(this.form)
+       
+       localStorage.setItem('token', response.data.token)
+
+      }
   }
 }
 
@@ -123,7 +135,7 @@ input{
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   padding-left: 2%;
   color: #585858;
 }

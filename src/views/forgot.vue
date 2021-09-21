@@ -105,7 +105,7 @@ input{
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 10px;
   padding-left: 2%;
   color: #585858;
 }
