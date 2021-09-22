@@ -10,7 +10,7 @@
           <div class="container-form">
 
             <div class="logo">
-              <p>fiyoe.</p>
+              <img src="../assets/lokacara.png" alt="">
             </div>
 
               <form @submit.prevent="handleSubmit">
@@ -60,11 +60,11 @@ export default {
   },
   methods:{
     async handleSubmit(){
-      await axios.post('login', {
+      await axios.post('register-organizer', {
         email: this.form.email,
-        name: this.form.name,
-        pw: this.form.pw,
-        pw_c: this.form.pw_c
+        username: this.form.name,
+        password: this.form.pw,
+        // passwo: this.form.pw_c
       });
       
       this.$router.push('/');
@@ -92,11 +92,9 @@ export default {
   margin-top: 3%;
 }
 
-.logo p{
-  font-family: 'Palanquin', sans-serif;
-  font-weight: bold;
-  color: #0F84DE;
-  font-size: 40px;
+.logo img{
+  max-width: 45%;
+  padding-top: 10%;
 }
 
 form{

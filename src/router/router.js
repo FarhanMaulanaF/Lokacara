@@ -22,11 +22,6 @@ export default new Router({
         path: '/forgot-password',
         name: 'Forgot',
         component: () => import('../views/forgot.vue')
-      },
-      {
-        path: '/test',
-        name: 'Test',
-        component: () => import('../views/test.vue')
       }
       
     ]

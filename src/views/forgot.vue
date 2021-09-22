@@ -9,7 +9,7 @@
         <b-col>
           <div class="container-form">
             <div class="logo">
-              <p>fiyoe.</p>
+              <img src="../assets/lokacara.png" alt="">
             </div>
               <form action="">
                 <h1 class='title-login'>Forgot Password</h1>
@@ -65,11 +65,9 @@ export default {
   margin-top: 3%;
 }
 
-.logo p{
-  font-family: 'Palanquin', sans-serif;
-  font-weight: bold;
-  color: #0F84DE;
-  font-size: 40px;
+.logo img{
+  max-width: 45%;
+  padding-top: 10%;
 }
 
 form{

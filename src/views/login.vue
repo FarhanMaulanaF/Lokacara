@@ -9,7 +9,7 @@
         <b-col>
           <div class="container-form">
             <div class="logo">
-              <p>fiyoe.</p>
+              <img src="../assets/lokacara.png" alt="Lokacara">
             </div>
               <form @submit.prevent="handleSubmit">
                 <h1 class='title-login'>Login</h1>
@@ -67,8 +67,6 @@ export default {
           password: this.form.pw
         });
 
-       console.log(this.form)
-       
        localStorage.setItem('token', response.data.token)
 
       }
@@ -95,11 +93,9 @@ export default {
   margin-top: 3%;
 }
 
-.logo p{
-  font-family: 'Palanquin', sans-serif;
-  font-weight: bold;
-  color: #0F84DE;
-  font-size: 40px;
+.logo img{
+  max-width: 45%;
+  padding-top: 10%;
 }
 
 form{
