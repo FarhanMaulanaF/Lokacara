@@ -22,6 +22,11 @@ export default new Router({
         path: '/forgot-password',
         name: 'Forgot',
         component: () => import('../views/forgot.vue')
+      },
+      {
+        path: '/dashboard',
+        name: 'Dashboard',
+        component: () => import('../views/dashboard.vue')
       }
       
     ]

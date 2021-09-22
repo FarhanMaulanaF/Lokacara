@@ -66,9 +66,8 @@ export default {
           email: this.form.email,
           password: this.form.pw
         });
-
-       localStorage.setItem('token', response.data.token)
-
+        this.$router.push('/test');
+        localStorage.setItem('token', response.data.token)
       }
   }
 }
