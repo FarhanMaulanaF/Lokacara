@@ -1,15 +1,15 @@
 <template>
     <nav>
         <!-- in toolbar -->
-        <v-toolbar flat app elevation="1">
+        <v-toolbar class="top-bar" flat app elevation="1" >
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
             <v-spacer></v-spacer>
             <!-- in button create an event -->
-            <v-btn elevation="0" class="white--text" color="#0F84DE">
+            <v-btn elevation="0" class="white--text mr-10 px-9 py-5 createEvent" color="#0F84DE">
                 <span> Create an Event</span>
             </v-btn>
             <!-- out button create event -->
-            <v-btn class="ml-2" elevation="0" fab small><v-img src="@/assets/logo-account.svg"/></v-btn>
+            <v-btn class="mr-7 ml-3 profile" elevation="0" fab small><v-img src="@/assets/logo-account.svg"/></v-btn>
         </v-toolbar>
         <!-- out toolbar -->
 
@@ -18,7 +18,7 @@
             <!-- in logo -->
             <v-list-item>
                 <v-list-item-content>
-                    <v-list-item-title>
+                    <v-list-item-title style="color: #3F3F3F;">
                             <v-img width="165.94px" height="32px" src="@/assets/logo-lokacara.svg" alt="Lokacara"/>
                     </v-list-item-title>
                 </v-list-item-content>
@@ -63,3 +63,19 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+nav .profile{
+    width:2%;
+}
+
+nav .createEvent{
+    font-size: 11.5px;
+    font-weight: 700;
+}
+
+/* .logo-title{
+    color: #3F3F3F;
+} */
+
+</style>
