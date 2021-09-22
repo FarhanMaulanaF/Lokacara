@@ -1,32 +1,23 @@
 <template>
-  <v-bottom-navigation
-    :value="value"
-    color="teal"
-    grow
-  >
-    <v-btn>
-      <span>Recents</span>
-
-      <v-icon>mdi-history</v-icon>
-    </v-btn>
-
-    <v-btn>
-      <span>Favorites</span>
-
-      <v-icon>mdi-heart</v-icon>
-    </v-btn>
-
-    <v-btn>
-      <span>Nearby</span>
-
-      <v-icon>mdi-map-marker</v-icon>
-    </v-btn>
-  </v-bottom-navigation>
+  <div>
+    <Navbar/>
+      <div class="dashboard">
+        <h3>Dashboard</h3>
+        <v-container class="my-5">
+          <v-layout row>
+            <v-flex></v-flex>
+          </v-layout>
+        </v-container>
+      </div>
+  </div>
 </template>
 
 <script>
-export default {
+import Navbar from '../components/Navbar.vue'
 
+export default {
+  name: 'Dashboard',
+  components: {Navbar}
 }
 </script>
 

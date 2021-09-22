@@ -16,6 +16,7 @@ export default {
 /* reset ================================ */
 * {
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
