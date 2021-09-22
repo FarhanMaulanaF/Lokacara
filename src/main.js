@@ -6,15 +6,14 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import router from './router/router'
 import store from './store/store'
 import './axios'
-// import VueAxios from 'vue-axios'
+import vuetify from '@/plugins/vuetify' // path to vuetify export
 
-// Vue.use(VueAxios, axios)
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
-
 Vue.config.productionTip = false
 
 new Vue({
+  vuetify,
   router,
   store,
   render: h => h(App),

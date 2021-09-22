@@ -6,7 +6,7 @@
          <!--Balon udara  -->
 
          <!-- Untuk form login -->
-        <b-col>
+        <b-col style="padding: 0; margin:0;">
           <div class="container-form">
             <div class="logo">
               <img src="../assets/lokacara.png" alt="Lokacara">
@@ -66,7 +66,7 @@ export default {
           email: this.form.email,
           password: this.form.pw
         });
-        this.$router.push('/test');
+        this.$router.push('/dashboard');
         localStorage.setItem('token', response.data.token)
       }
   }
@@ -85,7 +85,8 @@ export default {
 
 .container-form{
   margin: 0 auto;
-  width: 420px;;
+  width: 420px;
+  
 }
 
 .logo{
