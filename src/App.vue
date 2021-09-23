@@ -1,32 +1,60 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view></router-view>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'App',
+  components: {
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+/* reset ================================ */
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-#nav {
-  padding: 30px;
+body {
+  margin: 0;
+  background-color: #f6faff;
+  color: white;
+  /* color: #6c7686; */
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+a {
+  display: block;
+  text-decoration: none;
+  color: #2d3133;
+  font-size: 14px;
 }
+
+a:hover {
+  transition: all 0.3s ease;
+}
+
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+/* Batas reset CSS */
+
+/* Awal CSS  */
+
+
 </style>
