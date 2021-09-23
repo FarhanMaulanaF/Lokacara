@@ -27,8 +27,27 @@ export default new Router({
         path: '/dashboard',
         name: 'Dashboard',
         component: () => import('../views/dashboard.vue')
-      }
-      
+      },
+      {
+        path: '/event-list',
+        name: 'EventList',
+        component: () => import('../views/eventlist.vue')
+      },
+      {
+        path: '/create-1',
+        name: 'create-1',
+        component: () => import('../views/create_event/create-1.vue')
+      },
+      {
+        path: '/create-2',
+        name: 'create-2',
+        component: () => import('../views/create_event/create-2.vue')
+      },
+      {
+        path: '/create-3',
+        name: 'create-3',
+        component: () => import('../views/create_event/create-3.vue')
+      },
     ]
   })
 
