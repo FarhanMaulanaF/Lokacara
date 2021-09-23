@@ -9,16 +9,18 @@
       </div>
       <hr>
       <Search/>
+      <TabEv/>
   </div>
 </template>
 
 <script>
 import Navbar from '../components/Navbar.vue'
 import Search from '../components/search.vue'
+import TabEv from '../components/table-event.vue'
 
 export default {
   name: 'Dashboard',
-  components: {Navbar,Search}
+  components: {Navbar,Search,TabEv}
 }
 </script>
 

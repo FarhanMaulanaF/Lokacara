@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
 .container{
-    margin-left: 4%;
+    margin-left: 4.21%;
 }
 
 .search{
