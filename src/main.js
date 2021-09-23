@@ -7,7 +7,12 @@ import router from './router/router'
 import store from './store/store'
 import './axios'
 import vuetify from '@/plugins/vuetify' // path to vuetify export
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+library.add(faUserSecret)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.config.productionTip = false

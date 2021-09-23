@@ -27,6 +27,11 @@ export default new Router({
         path: '/dashboard',
         name: 'Dashboard',
         component: () => import('../views/dashboard.vue')
+      },
+      {
+        path: '/event-list',
+        name: 'Event List',
+        component: () => import('../views/event-list.vue')
       }
       
     ]
