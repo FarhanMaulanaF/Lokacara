@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-form-select class="form-select" v-model="selected" :options="options"></b-form-select>
-    <div id= "pilihan-form-select" class="mt-3">Selected: <strong>{{ selected }}</strong></div>
+    
   </div>
 </template>
 
@@ -14,15 +14,12 @@
         selected: null,
         options: [
           { value: null, text: 'Choose Category' },
-          { value: 'a', text: 'This is First option' },
-          { value: 'b', text: 'Selected Option', disabled: true },
-          {
-            label: 'Grouped options',
-            options: [
-              { value: { C: '3PO' }, text: 'Option with object value' },
-              { value: { R: '2D2' }, text: 'Another option with object value' }
-            ]
-          }
+          { value: 'Festival', text: 'Festival' },
+          { value: 'Kompetisi', text: 'Kompetisi' },
+          { value: 'Konser', text: 'Konser' },
+          { value: 'Pameran', text: 'Pameran' },
+          { value: 'Seminar', text: 'Seminar' },
+          { value: 'Talkshow', text: 'Talkshow' },
         ]
       }
     }
@@ -30,12 +27,8 @@
 </script>
 
 <style>
-form-select {
-  position: absolute;
-  width: 362px;
-  height: 48px;
-  left: 400px;
-  top: 456px;
+.form-select {
+  margin-bottom: 3%;
 }
 #pilihan-form-select {
   font-family: 'Inter';
