@@ -1,13 +1,13 @@
 <template>
   <div>
     <!-- in bagian navbar -->
-    <Navbar/>
+    <NavbarLogo/>
     <!-- out bagian navbar -->
 
     <!-- in bagian isi -->
     <div class="container-form">
       <p class="basic-title">Basic Info</p>
-      <hr style="border: 1px solid #5b6563; margin: 0 0 5%; max-width: 100%;">
+      <hr class="hr-style">
       <form action="">
         <label for="input-form">Event Name</label>
         <b-form-input class="input-form" type="text"></b-form-input>
@@ -57,7 +57,7 @@
               </b-col>
             </b-row>
           </div>
-          <hr style="border: 1px solid #5b6563; margin: 5% 0 5%; max-width: 100%;">
+          <hr class="hr-style" style="border: 1px solid #5b6563; margin: 5% 0 5%; max-width: 100%;">
       </form>
 
       <div class="btn-bot">
@@ -76,12 +76,12 @@
 </template>
 
 <script>
-import Navbar from '../../components/Navbar.vue'
+import NavbarLogo from '../../components/navbarLogo.vue'
 import formselection from '../../components/form-selection.vue'
 
 export default {
   name: 'Create-event',
-  components: {Navbar,formselection},
+  components: {NavbarLogo,formselection},
 
   data() {
     return {
@@ -97,6 +97,12 @@ export default {
 .container-form{
   max-width: 50%;
   margin: auto;
+}
+
+.hr-style{
+  border: 1px solid #5b6563;
+  margin: 0 0 5% 0; 
+  max-width: 100%;
 }
 
 .basic-title{
