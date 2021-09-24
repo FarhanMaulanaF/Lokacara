@@ -1,5 +1,5 @@
 <template>
-  <b-container class="bv-example-row" style="margin: 0 0; max-width: 1500px;">
+  <b-container class="bv-example-row" style="margin: 0 0; max-width: 1500px; max-height: 800px">
       <b-row>
         <!-- Untuk gambar balon udara -->
         <b-col class="balon-img"></b-col>
@@ -77,7 +77,7 @@ export default {
 <style scoped>
 .balon-img{
   width: 50%;
-  height: 643px;
+  height: 718px;
   background: url('../assets/login.jpg');
   background-repeat: no-repeat;
   background-size: cover;

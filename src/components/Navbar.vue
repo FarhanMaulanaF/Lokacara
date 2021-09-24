@@ -5,7 +5,9 @@
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
             <v-spacer></v-spacer>
             <!-- in button create an event -->
+            <router-link :to="{name: 'Create-Event'}">
             <b-button style="color: #fff;" class="btn-event mx-5 px-4 py-2" variant="primary">Create an Event</b-button>
+            </router-link>
             <!-- out button create event -->
             <v-btn class="profile" elevation="0" fab small><v-img src="../assets/logo-account.svg"/></v-btn>
         </v-toolbar>
@@ -104,9 +106,5 @@ nav .createEvent{
     margin-left: auto;
     margin-right: auto;
 }
-
-/* .logo-title{
-    color: #3F3F3F;
-} */
 
 </style>

@@ -50,7 +50,7 @@ export default {
 <style scoped>
 .balon-img{
   width: 50%;
-  height: 643px;
+  height: 718px;
   background: url('../assets/login.jpg');
   background-repeat: no-repeat;
   background-size: cover;

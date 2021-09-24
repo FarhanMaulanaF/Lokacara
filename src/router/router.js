@@ -30,8 +30,13 @@ export default new Router({
       },
       {
         path: '/event-list',
-        name: 'Event List',
+        name: 'Event-List',
         component: () => import('../views/event-list.vue')
+      },
+      {
+        path: '/create',
+        name: 'Create-Event',
+        component: () => import('../views/createEvent.vue')
       }
       
     ]
