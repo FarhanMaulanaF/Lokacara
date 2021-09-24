@@ -16,12 +16,12 @@
             <p class="main-desc" style="margin: 0;">Add more details to your event like your schedule, sponsors, or</p>
             <p class="main-desc" style="margin: 0;">featured guests.</p>
              <b-col style="padding: 0;">
-            <b-form-textarea
-                id="textarea-default"
-                placeholder="Typing Here..."
-                rows="5"
-                class="form-type">
-            </b-form-textarea>
+                <b-form-textarea
+                    id="textarea-default"
+                    placeholder="Typing Here..."
+                    rows="5"
+                    class="form-type">
+                </b-form-textarea>
             </b-col>
 
             <hr class="hr-style" style="border: 1px solid #5b6563; margin: 15% 0 5%; max-width: 100%;">
@@ -30,7 +30,7 @@
                 <router-link :to="{name: 'Create-Event'}">
                     <b-button class="btn-disc" variant="outline-secondary">Previous</b-button>  
                 </router-link >
-                <router-link :to="{name: 'Details'}">
+                <router-link :to="{name: 'Ticket'}">
                     <b-button class="btn-next" variant="primary">Next</b-button>
                 </router-link>
             </div>
@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .container-detail{
   max-width: 50%;
   margin: auto;

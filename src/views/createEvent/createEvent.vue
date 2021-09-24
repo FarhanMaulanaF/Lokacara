@@ -10,10 +10,10 @@
       <hr class="hr-style">
       <form action="">
         <label for="input-form">Event Name</label>
-        <b-form-input class="input-form" type="text"></b-form-input>
+        <b-form-input v-model="eform.event_name" class="input-form" type="text"></b-form-input>
 
         <label for="input-form">Organizer</label>
-        <b-form-input class="input-form" type="text"></b-form-input>
+        <b-form-input v-model="eform.event_organizer" class="input-form" type="text"></b-form-input>
 
         <label for="input-form">Event Category</label>
         <formselection/>
@@ -21,13 +21,15 @@
         <label for="input-form">Location</label>
         <p class="desc-loc">Help people in the area discover your event and let attendees know where to show up.</p>
         <div class="cont-btn-loc">
-          <b-button class="btn-venue btn-loc" variant="primary">Venue</b-button>
-          <b-button class="btn-online btn-loc" variant="outline-primary">Online Venue</b-button>
+          <b-button  @click="toggleShowLocOn" class="btn-venue btn-loc" variant="primary">Venue</b-button>
+          <b-button @click="toggleShowLocOff" class="btn-online btn-loc" variant="outline-primary">Online Venue</b-button>
         </div>
-        <label class="loc-ven" for="input-form">Location Venue</label>
-        <b-form-input class="input-form ven" type="text"></b-form-input>
-        <span class="np">Note: </span> <span>Penyelenggaraan event offline hanya tersedia untuk lokasi di</span><span class="np"> Pulau Jawa.</span>
-
+        <div v-if="event_off">
+          <label class="loc-ven" for="input-form">Location Venue</label>
+          <b-form-input class="input-form ven" type="text"></b-form-input>
+          <span class="np">Note: </span> <span>Penyelenggaraan event offline hanya tersedia untuk lokasi di</span><span class="np"> Pulau Jawa.</span>
+        </div>
+      
         <label class="label-date" for="input-form">Date and Time</label>
         <p class="desc-loc">Tell event-goers when your event starts and ends so they can make plans to attend.</p>
     
@@ -85,10 +87,22 @@ export default {
 
   data() {
     return {
-      text: '',
-      value: '',
+      event_off: true,
+      eform: {
+        event_name: '',
+        event_organizer: '',
+        event_category: '',
+      }
     };
   },
+  methods: {
+    toggleShowLocOff() {
+      this.event_off = false
+    },
+    toggleShowLocOn() {
+      this.event_off = true
+    }
+  }
 }
 </script>
 

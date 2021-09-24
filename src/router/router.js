@@ -42,6 +42,11 @@ export default new Router({
         path: '/create/details',
         name: 'Details',
         component: () => import('../views/createEvent/createEvent_Details')
+      },
+      {
+        path: '/create/ticket',
+        name: 'Ticket',
+        component: () => import('../views/createEvent/createEvent_Ticket')
       }
 
       
