@@ -74,7 +74,7 @@ nav{
 }
 
 nav .btn-event{
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: .5px;
 }
